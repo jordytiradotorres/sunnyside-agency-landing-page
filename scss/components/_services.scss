@@ -1,0 +1,68 @@
+.services {
+  @include mq(medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__graphic-design,
+  &__photography {
+    position: relative;
+
+    @include mq(medium) {
+      display: flex;
+      justify-content: center;
+      height: 600px;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    img {
+      @include mq(medium) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 1rem;
+    padding: 3rem 1.2rem;
+    text-align: center;
+
+    @include mq(medium) {
+      width: 375px;
+      padding: 0;
+      bottom: 3.5rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      font-weight: 900;
+      text-transform: capitalize;
+      margin-bottom: 1.5rem;
+      color: $very-dark-desaturated-blue;
+      text-shadow: 1px 0 1px $dark-grayish-blue;
+
+      @include mq(medium) {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      font-family: "Barlow";
+      line-height: 1.7;
+      font-size: 0.89rem;
+      color: $very-dark-desaturated-blue;
+      text-shadow: 1px 0 1px $dark-grayish-blue;
+    }
+  }
+
+  &__photography {
+    h3,
+    p {
+      color: $dark-blue;
+    }
+  }
+}
