@@ -1,0 +1,72 @@
+.about {
+  text-align: center;
+
+  @include mq(medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__image {
+    img {
+      width: 100%;
+
+      @include mq(medium) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__image,
+  &__description {
+    @include mq(medium) {
+      max-height: 470px;
+    }
+  }
+
+  &__image:first-of-type {
+    order: 2;
+  }
+  &__image:last-of-type {
+    order: 3;
+  }
+  &__description:first-of-type {
+    order: 1;
+  }
+  &__description:last-of-type {
+    order: 4;
+  }
+
+  &__description {
+    padding: 3rem 0;
+    background-color: rgba($soft-red, 0.1);
+
+    @include mq(medium) {
+      padding: 5rem 0;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      width: 300px;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
+      color: $very-dark-desaturated-blue;
+      font-weight: 900;
+    }
+
+    p {
+      font-family: "Barlow";
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      color: $very-dark-grayish-blue;
+    }
+
+    .button {
+      @include button($yellow);
+    }
+
+    .button.stand {
+      @include button($soft-red);
+    }
+  }
+}

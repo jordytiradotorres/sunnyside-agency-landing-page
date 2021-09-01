@@ -105,15 +105,9 @@
     font-size: 1rem;
     transition: all 0.2s ease-in-out;
 
-    // &:hover {
-    //   background-color: $yellow;
-    //   color: $very-dark-desaturated-blue;
-    //   text-transform: uppercase;
-
-    //   @include mq(medium) {
-    //     background-color: $white;
-    //   }
-    // }
+    @include mq(medium) {
+      color: $white;
+    }
   }
 
   &__title {

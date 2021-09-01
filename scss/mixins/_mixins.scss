@@ -13,3 +13,32 @@
     }
   }
 }
+
+@mixin button($bgc) {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  font-family: "Fraunces";
+  text-decoration: none;
+  color: $very-dark-desaturated-blue;
+  font-weight: 900;
+
+  &:hover::after {
+    background-color: $bgc;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -14px;
+    right: 0;
+    width: 120%;
+    height: 80%;
+    margin: 0 auto;
+    background-color: rgba($bgc, 0.3);
+    transition: all 0.2s;
+    z-index: -10;
+  }
+}
