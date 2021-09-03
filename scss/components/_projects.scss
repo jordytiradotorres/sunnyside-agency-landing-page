@@ -1,0 +1,21 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include mq(medium) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  figure {
+    height: 230px;
+
+    @include mq(medium) {
+      height: 400px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

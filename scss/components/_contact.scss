@@ -1,0 +1,61 @@
+.contact {
+  background-color: lighten($dark-moderate-cyan, 25%);
+  text-align: center;
+  padding: 3rem 2rem;
+
+  &__title {
+    font-family: "Barlow";
+    font-weight: 900;
+    font-size: 2rem;
+    color: $dark-desaturated-cyan;
+    text-shadow: 0 0 2px $dark-desaturated-cyan;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    font-family: "Barlow";
+    margin-bottom: 4rem;
+  }
+
+  &__item {
+    margin-right: 3.2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $dark-moderate-cyan;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    &__item {
+      margin-right: 1.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+
+      // &:hover {
+      //   background-color: $white;
+      // }
+    }
+  }
+}

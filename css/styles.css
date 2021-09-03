@@ -56,8 +56,7 @@ body {
   position: relative;
   bottom: 0;
   right: 0;
-  padding: 0.5rem;
-  margin-top: 2rem; }
+  padding: 0.5rem; }
 
 .home {
   position: relative;
@@ -353,5 +352,57 @@ body {
       font-size: 0.85rem;
       font-family: "Barlow";
       color: #a7abae; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 768px) {
+    .projects {
+      grid-template-columns: repeat(4, 1fr); } }
+  .projects figure {
+    height: 230px; }
+    @media (min-width: 768px) {
+      .projects figure {
+        height: 400px; } }
+    .projects figure img {
+      height: 100%;
+      width: 100%; }
+
+.contact {
+  background-color: #8bc6ba;
+  text-align: center;
+  padding: 3rem 2rem; }
+  .contact__title {
+    font-family: "Barlow";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #25564b;
+    text-shadow: 0 0 2px #25564b;
+    margin-bottom: 2rem; }
+  .contact__list {
+    display: flex;
+    justify-content: center;
+    font-family: "Barlow";
+    margin-bottom: 4rem; }
+  .contact__item {
+    margin-right: 3.2rem; }
+    .contact__item:last-child {
+      margin-right: 0; }
+  .contact__link {
+    text-decoration: none;
+    color: #458c7e;
+    transition: color 0.2s; }
+    .contact__link:hover {
+      color: white; }
+  .contact .social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem; }
+    .contact .social-media__item {
+      margin-right: 1.5rem; }
+      .contact .social-media__item:last-child {
+        margin-right: 0; }
+    .contact .social-media__link {
+      display: inline-block; }
 
 /*# sourceMappingURL=styles.css.map */
