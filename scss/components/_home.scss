@@ -13,6 +13,11 @@
   @include mq(medium) {
     background-image: url(../images/desktop/image-header.jpg);
   }
+
+  @media (max-height: 625px) {
+    min-height: 75vh;
+  }
+
   @include mq(large) {
     min-height: 100vh;
   }
@@ -124,6 +129,25 @@
     @include mq(x-large) {
       margin-top: 5rem;
     }
+
+    @media (max-height: 625px) {
+      margin-top: 1rem;
+    }
+    @media (max-height: 667px) {
+      margin-top: 1.5rem;
+    }
+    @media (max-height: 736px) {
+      margin-top: 1.5rem;
+    }
+    @media (max-height: 625px) and (min-width: 768px) {
+      margin-top: 1.5rem;
+    }
+    @media (max-height: 625px) and (min-width: 1024px) {
+      margin-top: 5rem;
+    }
+    @media (min-width: 1440px) and (max-height: 700px) {
+      margin-top: 5rem;
+    }
   }
 
   &__arrow-down {
@@ -135,6 +159,20 @@
     }
     @include mq(x-large) {
       margin-top: 3.5rem;
+    }
+
+    @media (max-height: 625px) {
+      margin-top: 1rem;
+    }
+    @media (max-height: 667px) {
+      margin-top: 1rem;
+    }
+
+    @media (max-height: 625px) and (min-width: 768px) {
+      margin-top: 1.5rem;
+    }
+    @media (max-height: 625px) and (min-width: 1024px) {
+      margin-top: 2.5rem;
     }
   }
 }
